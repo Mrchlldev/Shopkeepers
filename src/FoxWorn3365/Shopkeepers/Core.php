@@ -82,7 +82,7 @@ use pocketmine\network\mcpe\protocol\types\inventory\UseItemOnEntityTransactionD
 use pocketmine\network\mcpe\convert\TypeConversionException;
 
 // pmmpStats
-use FoxWorn3365\Shopkeepers\pmmpStats\pmmpStatsTask;
+//use FoxWorn3365\Shopkeepers\pmmpStats\pmmpStatsTask;
 
 // YAMLPower
 use FoxWorn3365\YAMLPower\Parser;
@@ -178,9 +178,9 @@ class Core extends PluginBase implements Listener {
         $this->yaml::parseArray($var, $this->yamlHandler->onShopkeeperStartup, $this->yaml->error);
 
         // Create the sheduler for pmmpStats only if enabled
-        if ($this->config->get('enable-pmmpstats-datashare', true)) {
-            $this->getScheduler()->scheduleRepeatingTask(new pmmpStatsTask($this), 100*20);
-        }
+	//if ($this->config->get('enable-pmmpstats-datashare', true)) {
+            //$this->getScheduler()->scheduleRepeatingTask(new pmmpStatsTask($this), 100*20);
+        //}
 
         // Now check if this is the latest relase
         if ($this->config->get('enable-version-checker', true)) {
