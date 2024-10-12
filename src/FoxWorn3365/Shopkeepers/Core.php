@@ -93,6 +93,7 @@ class Core extends PluginBase implements Listener {
     protected object $trades;
     protected object $tradeQueue;
     protected object $handle;
+    protected Config $config;
     
     // API
     public static ShopkeepersAPI $api;
